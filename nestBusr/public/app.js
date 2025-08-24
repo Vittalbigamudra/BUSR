@@ -1,7 +1,7 @@
 // app.js
 
 // API base URL
-const API_BASE_URL = 'http://localhost:4000';
+const API_BASE_URL = 'http://localhost:5000';
 
 // Initialize map
 const map = L.map('map', {

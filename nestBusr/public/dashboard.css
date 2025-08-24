@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    overflow: hidden;
+}
+
+.header {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    text-align: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    opacity: 0.8;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    height: calc(100vh - 100px);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.map-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    overflow-y: auto;
+}
+
+.status-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.status-card h3 {
+    margin-bottom: 0.5rem;
+    color: #4ade80;
+}
+
+.satellite-constellation {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.constellation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.satellite {
+    width: 40px;
+    height: 40px;
+    background: #4ade80;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(74, 222, 128, 0.5);
+}
+
+.satellite.weak {
+    background: #fbbf24;
+    box-shadow: 0 0 20px rgba(251, 191, 36, 0.5);
+}
+
+.satellite.strong {
+    background: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5);
+}
+
+.coordinates {
+    font-family: monospace;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+}
+
+.signal-quality {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.signal-bar {
+    flex: 1;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.signal-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ef4444, #fbbf24, #10b981);
+    transition: width 0.3s ease;
+}
+
+.last-update {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+.refresh-btn {
+    background: #4ade80;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+    background: #22c55e;
+    transform: translateY(-2px);
+}
+
+/* Polar Coordinate Display */
+.polar-coordinates {
+    text-align: center;
+}
+
+.polar-coordinates h3 {
+    margin-bottom: 1rem;
+    color: #4ade80;
+}
+
+.polar-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.north {
+    font-weight: bold;
+    color: #4ade80;
+}
+
+.directions {
+    display: flex;
+    gap: 2rem;
+    margin: 0.5rem 0;
+}
+
+.nw, .ne {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.south {
+    font-weight: bold;
+    color: #4ade80;
+}
+
+.satellite-list {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.satellite-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    border-left: 3px solid #4ade80;
+}
+
+/* Satellite Markers on Map */
+.satellite-marker {
+    background: transparent !important;
+    border: none !important;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+}
+
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+    }
+}

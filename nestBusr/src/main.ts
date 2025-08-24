@@ -18,7 +18,7 @@ async function bootstrap() {
   // Set global prefix if needed
   // app.setGlobalPrefix('api');
   
-  const port = process.env.PORT || 3000;
+  const port = process.env.PORT || 5000;
   
   // Enable validation
   app.useGlobalPipes(new ValidationPipe({
@@ -53,9 +53,10 @@ async function bootstrap() {
   });
 
   // Start the server
-  await app.listen(port);
+  await app.listen(port, '0.0.0.0');
   
-  console.log(`🚀 Application is running on: http://localhost:${port}`);
+  console.log(`🚀 Application is running on: http://0.0.0.0:${port}`);
+  console.log(`🌐 Network accessible at: http://192.168.4.112:${port}`);
   console.log(`📚 Swagger documentation available at: http://localhost:${port}/api`);
 }
 

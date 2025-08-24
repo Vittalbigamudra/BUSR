@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSR - Satellite Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>🛰️ BUSR Satellite Dashboard</h1>
+        <p>Real-time GPS tracking and satellite constellation visualization</p>
+    </div>
+
+    <div class="dashboard">
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+
+        <div class="sidebar">
+            <div class="status-card">
+                <h3>📍 Current Location</h3>
+                <div class="coordinates" id="coordinates">Waiting for GPS data...</div>
+                <div class="last-update" id="lastUpdate">Last update: Never</div>
+            </div>
+
+            <div class="status-card">
+                <h3>🛰️ Satellite Status</h3>
+                <div class="satellite-constellation">
+                    <div class="constellation-grid" id="constellationGrid">
+                        <!-- Satellites will be populated here -->
+                    </div>
+                </div>
+                <div class="signal-quality">
+                    <span>Signal Quality:</span>
+                    <div class="signal-bar">
+                        <div class="signal-fill" id="signalFill" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div id="satelliteCount">Satellites: 0</div>
+            </div>
+
+            <div class="status-card">
+                <h3>📡 Connection Status</h3>
+                <div id="connectionStatus">Checking...</div>
+                <button class="refresh-btn" onclick="refreshData()">🔄 Refresh Data</button>
+            </div>
+
+            <div class="status-card">
+                <h3>🛰️ Real Satellite Data</h3>
+                <div id="polarDisplay">
+                    <p>Waiting for satellite data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
