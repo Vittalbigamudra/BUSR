@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "ES2022",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    /* Decorators */
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
+    /* Source Map & Comments */
+    "sourceMap": true,
+    "removeComments": true,
+
+    /* Other Checks */
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": false,
+    "isolatedModules": true,
+
+    /* Type Definitions */
+    "types": [
+      "node",
+      "jest",
+      "express",
+      "supertest"
+    ]
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUSR Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>BUSR Map</h2>
+    <div id="selectors">
+      <label>
+        State:
+        <select id="state">
+          <option value="">--Select a state--</option>
+        </select>
+      </label>
+      <label>
+        County:
+        <select id="county" disabled>
+          <option value="">--Select a county--</option>
+        </select>
+      </label>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html> 

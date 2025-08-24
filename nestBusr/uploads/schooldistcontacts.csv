@@ -1,0 +1,8 @@
+SchoolDistId,FirstName,LastName,Phone,Email,Title
+1,John,Doe,408-555-1234,john.doe@sunnyvale.edu,PR
+1,Susan,Smith,408-555-5678,susan.smith@sunnyvale.edu,AD
+2,Michael,Johnson,212-555-8765,michael.johnson@brighton.edu,PR
+2,Linda,Brown,212-555-4321,linda.brown@brighton.edu,AD
+3,Robert,Williams,713-555-1234,robert.williams@maplewood.edu,PR
+4,Emily,Jones,305-555-5678,emily.jones@lakeview.edu,AD
+5,David,Miller,206-555-7890,david.miller@greenfield.edu,PR
